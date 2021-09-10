@@ -31,7 +31,7 @@
 #include "squirrel/squirrel/sqvm.h"
 #include "squirrel/squirrel/sqclosure.h"
 
-#include "color.h"
+#include "Color.h"
 #include "tier1/utlbuffer.h"
 #include "tier1/mapbase_con_groups.h"
 
