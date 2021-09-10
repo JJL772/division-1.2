@@ -23,7 +23,7 @@ $Project "Client (RTBR)"
 	$Folder "Source Files"
 	{
 	    
-		$Folder "Shader Editor" [$WIN32]
+		$Folder "Shader Editor"
 		{
 			$Folder	"Header Files"
 		   {
