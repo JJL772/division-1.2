@@ -28,6 +28,8 @@ obj*/
 !devtools/*.mak
 sp/src/devtools/makefile_base_posix.mak.link
 !utils/smdlexp/smdlexp.mak
+!sp/src/devtools/makefile_base_posix.mak
+!mp/src/devtools/makefile_base_posix.mak
 
 # Specific Source build products
 client.pdb
