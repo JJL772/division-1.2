@@ -41,7 +41,7 @@
 #include "physics_collisionevent.h"
 #include "gamestats.h"
 #include "vehicle_base.h"
-#include "particles\particles.h"
+#include "particles/particles.h"
 #include "particle_parse.h"
 #ifdef MAPBASE
 #include "mapbase/GlobalStrings.h"

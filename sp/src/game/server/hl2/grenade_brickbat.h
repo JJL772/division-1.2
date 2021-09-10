@@ -16,7 +16,7 @@
 
 #include "basegrenade_shared.h"
 
-enum BrickbatAmmo_t;
+enum BrickbatAmmo_t : uint32_t;
 
 class CGrenade_Brickbat : public CBaseGrenade
 {

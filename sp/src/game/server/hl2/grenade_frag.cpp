@@ -9,7 +9,7 @@
 #include "basegrenade_shared.h"
 #include "grenade_frag.h"
 #include "particle_parse.h"
-#include "particles\particles.h"
+#include "particles/particles.h"
 #include "Sprite.h"
 #include "SpriteTrail.h"
 #include "soundent.h"

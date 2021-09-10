@@ -20,7 +20,7 @@
 #define	LIGHTSTALK_H
 
 #include "ai_basenpc.h"
-#include "EntityOutput.h"
+#include "entityoutput.h"
 
 #define NUM_CAGE_BEAMS 2
 
