@@ -152,8 +152,15 @@ inline void *ScriptConvertFuncPtrToVoid( FUNCPTR_TYPE pFunc )
 		GnuMFP *p = (GnuMFP*)&pFunc;
 		if ( p->vtable_index_2 & 1 )
 		{
+			// jjl77: This was originally doing a cast+deref of delta and adding that to the vtable index
+			//         however that seems incorrect for a number of reasons. I was getting a crash on
+			//         registration of Name in IGameSystem in gamerules.cpp. delta was 0 in that case.
+			//         well, Name is also the first entry in the vtable for that interface, so obviously
+			//         delta corresponds to an offset, NOT a pointer to an offset. The referenced blogpost
+			//         below appears to be incorrect for GCC. The author treats delta as an offset for other
+			//         "similar" compilers too. 
 			char **delta = (char**)p->delta;
-			char *pCur = *delta + (p->vtable_index_2+1)/2;
+			char *pCur = reinterpret_cast<char*>(p->delta + (p->vtable_index_2+1)/2);
 			return (void*)( pCur + 4 );
 		}
 		else

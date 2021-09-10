@@ -1108,7 +1108,6 @@ class CDefScriptScopeBase
 public:
 	static IScriptVM *GetVM()
 	{
-		extern IScriptVM *g_pScriptVM;
 		return g_pScriptVM;
 	}
 };
@@ -1585,7 +1584,6 @@ struct ScriptHook_t
 	// Checks if there's a function of this name which would run in this scope
 	HSCRIPT CanRunInScope( HSCRIPT hScope )
 	{
-		extern IScriptVM *g_pScriptVM;
 		m_hFunc = g_pScriptVM->LookupFunction( m_desc.m_pszScriptName, hScope );
 		return m_hFunc;
 	}
@@ -1605,8 +1603,6 @@ struct ScriptHook_t
 	// Call the function
 	bool Call( HSCRIPT hScope, ScriptVariant_t *pReturn, ScriptVariant_t *pArgs, bool bRelease = true )
 	{
-		extern IScriptVM *g_pScriptVM;
-
 		// Make sure we have a function in this scope
 		if (!m_hFunc && !CanRunInScope(hScope))
 			return false;
