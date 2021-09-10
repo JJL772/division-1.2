@@ -42,6 +42,7 @@ $Project "mathlib"
 		$File	"vector.cpp"
 		$File	"vmatrix.cpp"
 		$File	"almostequal.cpp"
+		$File	"gcc9support.cpp"
 	}
 
 
